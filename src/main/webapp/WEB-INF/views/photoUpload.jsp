@@ -15,6 +15,9 @@
             </div>
             <button type="submit" class="btn btn-primary">업로드</button>
         </form>
+		
+<button type="button" class="btn btn-primary mt-3" onclick="location.href='${pageContext.request.contextPath}/sensorCheck'">인증하기</button> <!-- JavaScript 사용 -->
+	
         
         <% if (request.getParameter("success") != null) { %>
             <div class="alert alert-success mt-3">사진이 성공적으로 업로드되었습니다.</div>

@@ -2861,6 +2861,8 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #1abc9c;
 }
 
+
+
 .btn-secondary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #2c3e50;
@@ -10877,7 +10879,7 @@ html {
 }
 
 .btn-xl {
-  padding: 1rem 1.75rem;
+  padding: 0.5rem 1rem;
   font-size: 1.25rem;
 }
 

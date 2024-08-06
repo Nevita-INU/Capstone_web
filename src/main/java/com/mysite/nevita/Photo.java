@@ -16,4 +16,14 @@ public class Photo {
     
     @Lob
     private byte[] data;
+
+	public void setData(byte[] bytes) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setFileName(String originalFilename) {
+		// TODO Auto-generated method stub
+		
+	}
 }

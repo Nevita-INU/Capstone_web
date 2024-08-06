@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
 
@@ -20,6 +20,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools' //서버를 재시작하지 않아도 클래스 변경하면 서버가 자동으로 재가
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	//implementation 'javax.servlet:jstl'
 	implementation 'jakarta.servlet:jakarta.servlet-api' //스프링부트 3.0 이상
