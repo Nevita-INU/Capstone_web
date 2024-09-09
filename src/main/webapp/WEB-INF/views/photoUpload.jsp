@@ -8,10 +8,10 @@
 <body>
     <div class="container mt-5">
         <h2>사진 업로드</h2>
-        <form action="${pageContext.request.contextPath}/photoUpload" method="post" enctype="multipart/form-data">
+        <form action="${pageContext.request.contextPath}/photo/upload" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="file" class="form-label">사진 선택:</label>
-                <input type="file" class="form-control" id="file" name="file" accept="image/*" required>
+                <input type="file" class="form-control" id="file" name="image" accept="image/*" required>
             </div>
             <button type="submit" class="btn btn-primary">업로드</button>
         </form>

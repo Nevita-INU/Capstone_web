@@ -1,4 +1,4 @@
-package com.mysite.nevita;
+package com.mysite.nevita.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
