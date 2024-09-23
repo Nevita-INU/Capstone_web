@@ -30,9 +30,10 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.reactivestreams:reactive-streams:1.0.3'
 
 	// Apache HttpComponents for HTTP communication with Flask server
-	implementation 'org.apache.httpcomponents.client5:httpclient5:5.1'
+	implementation 'org.apache.httpcomponents:httpclient:4.5.13' // HttpClient 4.x 버전 사용
 }
 
 tasks.named('test') {

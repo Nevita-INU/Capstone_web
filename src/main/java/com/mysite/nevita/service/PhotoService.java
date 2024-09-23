@@ -4,46 +4,56 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.MultipartBodyBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 @Service
 public class PhotoService {
 
-    // Flask 서버 URL
-    private static final String FLASK_SERVER_URL = "http://localhost:5000/process-image";
+    private final RestTemplate restTemplate = new RestTemplate();
+    private final String flaskServerUrl = "http://localhost:5000/process-image"; // Flask 서버 URL
 
-    // Flask 서버로 이미지를 보내고 결과를 받아옴
-    public String sendPhotoToFlask(MultipartFile imageFile) throws IOException {
-        RestTemplate restTemplate = new RestTemplate(new HttpComponentsClientHttpRequestFactory());
+    public String sendPhotoToFlask(MultipartFile file) {
+        try {
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.MULTIPART_FORM_DATA);
 
-        // 헤더 설정 (multipart/form-data)
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+            // 파일을 Resource로 변환
+            Resource resource = new ByteArrayResource(file.getBytes()) {
+                @Override
+                public String getFilename() {
+                    return file.getOriginalFilename();
+                }
+            };
 
-        // 이미지 파일 전송 설정
-        Map<String, Object> body = new HashMap<>();
-        body.put("image", imageFile.getResource());
+            // MultipartBodyBuilder 사용하여 multipart 요청 생성
+            MultipartBodyBuilder builder = new MultipartBodyBuilder();
+            builder.part("image", resource); // "image"라는 이름으로 파일 전송
 
-        // 요청 본문과 헤더를 포함한 엔티티 생성
-        HttpEntity<Map<String, Object>> requestEntity = new HttpEntity<>(body, headers);
+            // 요청 엔티티 생성
+            MultiValueMap<String, HttpEntity<?>> multipartRequest = builder.build();
+            HttpEntity<MultiValueMap<String, HttpEntity<?>>> requestEntity = new HttpEntity<>(multipartRequest, headers);
 
-        // Flask 서버로 POST 요청
-        ResponseEntity<String> response = restTemplate.exchange(FLASK_SERVER_URL, HttpMethod.POST, requestEntity, String.class);
+            // Flask 서버로 POST 요청
+            ResponseEntity<String> responseEntity = restTemplate.exchange(
+                    flaskServerUrl,
+                    HttpMethod.POST,
+                    requestEntity,
+                    String.class
+            );
 
-        // 성공적으로 결과를 받으면 반환
-        if (response.getStatusCode() == HttpStatus.OK) {
-            return response.getBody(); // YOLO 결과(JSON) 반환
-        } else {
-            throw new RuntimeException("Failed to get response from Flask server");
+            // 성공적으로 결과를 받으면 반환
+            return responseEntity.getBody();
+        } catch (IOException e) {
+            throw new RuntimeException("파일을 Flask 서버로 전송하는 중 오류가 발생했습니다.", e);
         }
     }
 }
