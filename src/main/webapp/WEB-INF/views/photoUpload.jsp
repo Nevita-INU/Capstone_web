@@ -16,11 +16,8 @@
             <input type="file" class="form-control" id="file" name="image" accept="image/*" required>
         </div>
         <!-- 폼 제출 버튼 추가 -->
-        <button type="submit" class="btn btn-primary mt-3">사진 업로드</button>
+        <button type="submit" class="btn btn-primary mt-3">인증하기</button>
     </form>
-
-    <!-- 인증하기 버튼 -->
-    <button type="button" class="btn btn-primary mt-3" onclick="location.href='${pageContext.request.contextPath}/sensorCheck'">인증하기</button>
 
     <!-- 업로드 성공/실패 메시지 -->
     <% if (request.getParameter("success") != null) { %>

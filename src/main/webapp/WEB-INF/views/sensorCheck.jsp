@@ -58,9 +58,6 @@
 						<a href="${pageContext.request.contextPath}/photo/upload" class="btn btn-xl btn-outline-light">
 						사진 업로드
 						</a>
-						<a href="${pageContext.request.contextPath}/success" class="btn btn-xl btn-outline-light">
-											인증완료
-						</a>
 			        </div>
 			    </section>
 					
