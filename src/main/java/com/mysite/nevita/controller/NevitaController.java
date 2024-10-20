@@ -1,4 +1,4 @@
-package com.mysite.nevita;
+package com.mysite.nevita.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
