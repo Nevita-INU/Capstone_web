@@ -52,12 +52,10 @@
             </div>
 			<section class="page-section bg-primary text-white mb-0" id="sensorCheck">
 			        <div class="container">
-			            <a href="" class="btn btn-xl btn-outline-light">
-			            센서 확인
-			            </a>
-						<a href="${pageContext.request.contextPath}/photo/upload" class="btn btn-xl btn-outline-light">
-						사진 업로드
-						</a>
+                        <!-- 센서 확인 버튼: /sensorCheckResult 엔드포인트로 GET 요청을 보냄 -->
+                        <a href="${pageContext.request.contextPath}/sensorCheckResult" class="btn btn-xl btn-outline-light">
+                            센서 확인
+                        </a>
 			        </div>
 			    </section>
 					

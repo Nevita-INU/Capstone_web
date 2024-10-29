@@ -53,7 +53,7 @@
 			<section class="page-section bg-primary text-white mb-0" id="sensorCheck">
 				<div class="container">
 			        <a href="${pageContext.request.contextPath}/sensorCheck" class="btn btn-xl btn-outline-light">
-			            인증하고 운행 시작하기
+			            인증하기
 			        </a>
 			    </div>
 			</section>
