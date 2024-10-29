@@ -100,8 +100,8 @@
                 <div class="card-body contact-info">
                     <p><i class="fas fa-user"></i> <strong>최민지</strong></p>
                     <p><i class="fas fa-laptop-code"></i> 백엔드 개발자</p>
-                    <p><i class="fas fa-envelope"></i> kim@example.com</p>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/" target="_blank" class="github-link">github.com/최민지</a></p>
+                    <p><i class="fas fa-envelope"></i> ktdlocal@gmail.com </p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/minjichoii" target="_blank" class="github-link">github.com/최민지</a></p>
                 </div>
             </div>
         </div>
@@ -113,8 +113,8 @@
                 <div class="card-body contact-info">
                     <p><i class="fas fa-user"></i> <strong>이슬아</strong></p>
                     <p><i class="fas fa-laptop-code"></i> 백엔드 개발자</p>
-                    <p><i class="fas fa-envelope"></i> lee@example.com</p>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/" target="_blank" class="github-link">github.com/이슬아</a></p>
+                    <p><i class="fas fa-envelope"></i> leeseula01@inu.ac.kr </p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/SRASONY" target="_blank" class="github-link">github.com/이슬아</a></p>
                 </div>
             </div>
         </div>
@@ -126,8 +126,8 @@
                 <div class="card-body contact-info">
                     <p><i class="fas fa-user"></i> <strong>박상미</strong></p>
                     <p><i class="fas fa-laptop-code"></i> 백엔드 개발자</p>
-                    <p><i class="fas fa-envelope"></i> park@example.com</p>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/" target="_blank" class="github-link">github.com/박상미</a></p>
+                    <p><i class="fas fa-envelope"></i>psm1604@inu.ac.kr</p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/PARKSNAGMI" target="_blank" class="github-link">github.com/박상미</a></p>
                 </div>
             </div>
         </div>

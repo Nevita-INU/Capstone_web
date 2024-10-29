@@ -48,7 +48,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">모든 인증이 완료 되었습니다 안전 운행 하세요</p>
+                <p class="masthead-subheading font-weight-light mb-0">모든 인증이 완료 되었습니다. 안전 운행 하세요!</p>
             </div>
 			<section class="page-section bg-primary text-white mb-0" id="sensorCheck">
 				<div class="container">

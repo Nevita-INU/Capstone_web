@@ -1,17 +1,36 @@
 package com.mysite.nevita.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+import com.mysite.nevita.service.SensorService;
 
 @Controller
 public class SensorCheckController {
 
+    @Autowired
+    private SensorService sensorService;
+
     @GetMapping("/sensorCheck")
     public String sensorCheck() {
-        // 여기에 필요한 로직을 추가할 수 있습니다.
-        // 예: 센서 데이터를 가져오거나 처리하는 로직
-    	System.out.println("sensorCheck method called");
-        // "sensorCheck"라는 이름의 뷰(JSP 파일)를 반환합니다.
         return "sensorCheck";
+    }
+
+    @GetMapping("/sensorCheckResult")
+    public ModelAndView checkSensorAndRedirect() {
+        ModelAndView modelAndView = new ModelAndView();
+
+        if (sensorService.isProximityOne()) {
+            // proximity가 1이면 photoUpload.jsp로 리다이렉트
+            modelAndView.setViewName("redirect:/photo/upload");
+        } else {
+            // proximity가 1이 아니면 다시 sensorCheck 페이지로
+            modelAndView.setViewName("sensorCheck");
+            modelAndView.addObject("message", "Proximity is not 1");
+        }
+
+        return modelAndView;
     }
 }
