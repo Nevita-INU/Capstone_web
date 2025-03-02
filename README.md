@@ -71,34 +71,35 @@
         <br />
         <sub><b>김지민</b></sub>
       </a>
-    </td>
-    <td align="center">
-      <a href="">
-        <img src="" width="100px;" alt="이슬아"/>
+</td>
+<td align="center">
+      <a href="https://github.com/SRASONY">
+        <img src="https://github.com/SRASONY.png?size=100" width="100px;" alt="이슬아"/>
         <br />
         <sub><b>이슬아</b></sub>
       </a>
-    </td>
-    <td align="center">
-      <a href="">
-        <img src="" width="100px;" alt="최민지"/>
+</td>
+<td align="center">
+      <a href="https://github.com/minjichoii">
+        <img src="https://github.com/minjichoii.png?size=100" width="100px;" alt="최민지"/>
         <br />
         <sub><b>최민지</b></sub>
       </a>
-    </td>
-    <td align="center">
-      <a href="">
-        <img src="" width="100px;" alt="박상미"/>
+</td>
+<td align="center">
+      <a href="https://github.com/psm1604">
+        <img src="https://github.com/psm1604.png?size=100" width="100px;" alt="박상미"/>
         <br />
         <sub><b>박상미</b></sub>
       </a>
-    </td>
+</td>
+
   </tr>
   <tr>
     <td align="center">BE</td>
     <td align="center">BE</td>
-    <td align="center">딥러닝 개발</td>
-    <td align="center">딥러닝 개발</td>
+    <td align="center">DL</td>
+    <td align="center">DL</td>
   </tr>
 </table>
 
