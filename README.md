@@ -10,10 +10,15 @@
 </div> 
 
 <br/>
-
+# 0. Related Repository (연관 레포지토리)
+**FlaskServer**
+https://github.com/Nevita-INU/Capstone_flask.git
+**YOLO**
+https://github.com/Nevita-INU/helmet_project_YOLO.git
 # 1. Project Overview (프로젝트 개요)
 - 프로젝트 이름: Nevita
 - 프로젝트 설명: 스마트 IoT 센서와 YOLOv8을 활용한 헬멧 착용 여부 확인 전동 킥보드 웹 서비스
+  
 ### 기획 의도
 
 #### - 헬멧 착용 독려 및 안전성 강화
@@ -206,3 +211,5 @@ Capstone_web
 </div>
 
 YOLOv8이 validation을 수행한 결과이다. 사진을 통해 헬멧을 모두 ‘0: helmet’으로 인식하고 있으며, 히잡이나 헬멧 착용을 하지 않은 사진은 모두 ‘1: no_helmet’으로 인식하고 있는 것을 확인할 수 있다.
+
+
